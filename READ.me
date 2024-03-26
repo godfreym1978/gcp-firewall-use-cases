@@ -1,0 +1,12 @@
+This project works on the different scenarios and options available in Google Cloud for specifying Firewall access.
+
+The current implementations are -
+
+1. Allow access from everywhere i.e. 0.0.0.0/0
+The HTTP server running on GCE 'allow-0000' can be accessed from open internet
+
+2. Allow access from a source range of IP address CIDR
+The HTTP server running on 'allow-http-src-ip' can only be accessed from any one of the VMs from the created subnet i.e. 10.1.1.0/24
+
+3. Allow access from a source tag of machine
+The HTTP server running on 'allow-http-src-tag' can be accessed only from a VM with source tag 'allow-http-0000'
