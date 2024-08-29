@@ -1,6 +1,16 @@
 
 /*add the GCP provider*/
 
+
+data "terraform_remote_state" "foo" {
+  backend = "gcs"
+  config = {
+    bucket  = "gpmgcp3q24"
+    prefix  = "dev"
+  }
+}
+
+
 provider "google" {
   project     = var.project_num
   region      = var.region
